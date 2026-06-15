@@ -17,9 +17,9 @@ EOF
     koji download-build --arch=src "${SRPM}"
     rpm -i "${SRPM}.src.rpm"
     SPEC=$HOME/rpmbuild/SPECS/mangohud.spec
-    cp /work/patches/0001-Qualcomm-GPU-support.patch /work/patches/0002-SM8550-GPU.patch $HOME/rpmbuild/SOURCES/
+    cp /work/patches/0001-Qualcomm-GPU-support.patch /work/patches/0002-SM8550-GPU.patch /work/patches/0003-Battery-name.patch /work/patches/0004-Qualcomm-battery-power-now.patch /work/patches/0005-RAM-name.patch /work/patches/0006-SM8750-Battery.patch $HOME/rpmbuild/SOURCES/
     # inject patches after stock %prep unpacks rc1 + subprojects (fuzz: rc1 offsets)
-    sed -i "/-D -T -a6/a patch -p1 --fuzz=5 < %{_sourcedir}/0001-Qualcomm-GPU-support.patch\npatch -p1 --fuzz=5 < %{_sourcedir}/0002-SM8550-GPU.patch" "$SPEC"
+    sed -i "/-D -T -a6/a patch -p1 --fuzz=5 < %{_sourcedir}/0001-Qualcomm-GPU-support.patch\npatch -p1 --fuzz=5 < %{_sourcedir}/0002-SM8550-GPU.patch\npatch -p1 --fuzz=5 < %{_sourcedir}/0003-Battery-name.patch\npatch -p1 --fuzz=5 < %{_sourcedir}/0004-Qualcomm-battery-power-now.patch\npatch -p1 --fuzz=5 < %{_sourcedir}/0005-RAM-name.patch\npatch -p1 --fuzz=5 < %{_sourcedir}/0006-SM8750-Battery.patch" "$SPEC"
     REL="${SRPM##*-}"   # release from the pinned NVR (e.g. 2.fc44)
     sed -i "s/^Release:.*%autorelease.*/Release:        ${REL}.armada/" "$SPEC"
     sed -i "/^%autochangelog/d" "$SPEC"
