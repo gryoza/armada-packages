@@ -1,0 +1,49 @@
+From: virtudude <virtudude@protonmail.com>
+
+--- a/arch/arm64/boot/dts/qcom/qcs8550-ayaneo-pocketds.dts
++++ b/arch/arm64/boot/dts/qcom/qcs8550-ayaneo-pocketds.dts
+@@ -127,11 +127,11 @@
+ 		reset-gpios = <&tlmm 152 GPIO_ACTIVE_HIGH>, <&tlmm 153 GPIO_ACTIVE_HIGH>;
+ 	};
+ 
+-	/* Backlight */
++	/* secondary panel backlight (disabled with &mdss_dsi1) */
+ 	backlight: backlight@2e {
+ 		compatible = "silergy,sy7758";
+ 		reg = <0x2e>;
+-		status = "okay";
++		status = "disabled";
+ 	};
+ 
+ 	tca6408: tca64_20@20 {
+@@ -148,9 +148,11 @@
+ 	clock-frequency = <400000>;
+ 	status = "okay";
+ 
++	/* secondary digitizer (disabled with &mdss_dsi1) */
+ 	touchscreen@5d {
+ 		reg = <0x5d>;
+ 		compatible = "goodix,gt911";
++		status = "disabled";
+ 
+ 		interrupt-parent = <&tlmm>;
+ 		interrupts = <39 IRQ_TYPE_EDGE_FALLING>;
+@@ -214,9 +216,10 @@
+ 	};
+ };
+ 
++/* secondary panel disabled; armada drives only the primary */
+ &mdss_dsi1 {
+ 	vdda-supply = <&vreg_l3e_1p2>;
+-	status = "okay";
++	status = "disabled";
+ 
+ 	panel@0 {
+ 		compatible = "ayaneo,pocket-ds-secondary-panel";
+@@ -245,5 +248,5 @@
+ 
+ &mdss_dsi1_phy {
+ 	vdds-supply = <&vreg_l1e_0p88>;
+-	status = "okay";
++	status = "disabled";
+ };

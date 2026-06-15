@@ -1,0 +1,105 @@
+# armada-kernel patch series — applied top-to-bottom; `#` lines and anything
+# after a `#` are ignored.
+
+# ============== Display / DRM ==============
+0002-qcom-dispcc-sm8550-Fix-disp_cc_mdss_mdp_clk_src.patch
+#0004-drm-msm-a6xx-Enable-IFPC-on-Adreno-740.patch    # disabled: GMU wedge on a740
+0010-msm-resource-cleanup.patch
+0051-gpu-panel-add-Pocket-ACE-panel-driver.patch
+0052-gpu-panel-add-Pocket-DMG-panel-driver.patch
+0053-gpu-panel-add-Pocket-DS-lower-panel-driver.patch
+0055_Synaptics-TD4328-LCD-panel.patch
+0056_Xm-Plus-XM91080G-panel.patch
+0057_Chipone-ICNA35XX-panel.patch
+0057_DDIC-CH13726A-panel.patch
+0062-gpu-drm-panel-add-wt0630-panel.patch
+0104-drm-panel-Add-Retroid-Pocket-6-panel.patch
+
+# ============== Panel power + backlight ==============
+0058_AYN-Odin2-Mini--backlight.patch
+0060-Add-Silergy-SY7758-backlight-driver.patch
+0061-regulator-add-sgm3804-i2c-regulator-for-panel-power-.patch
+
+# ============== Touchscreen ==============
+0015-touchscreen-edt-ft5x06-allow-to-override-input-name.patch
+0030-input-rmi4-add-reset-gpio.patch
+0032-rmi4-silence-spam-irq-errors.patch
+0053-add-hynitron-touchscreen.patch
+0053-edt-ft5x06-add-no_regmap_bulk_read-option.patch
+0059_AYN-Odin2-Mini--hynitron--cstxxx.patch
+0060-input-touchscreen-add-synaptics-dsx-kconfig.patch   # keep before the driver
+0060-input-touchscreen-add-synaptics-dsx-driver.patch
+
+# ============== Input / Gamepad ==============
+0031_input--Add-driver-for-RSInput-Gamepad.patch
+0508-input-rsinput-add-pm-resume-to-reinit-mcu-after-suspend.patch
+1300-input-rsinput-ranges.patch
+# 1003-rsinput-add-ff.patch    # disabled: hunks overlap 0031
+0504-Enable-64-bit-processes-to-use-compat-input-syscalls.patch
+0506-usbcore-add-interrupt-interval-override.patch
+
+# ============== USB boot hang fix ==============
+0071-HACK-fix-usb-boot-hang.patch
+
+# ============== Haptics ==============
+1000-add-qcom-haptics-driver.patch
+1002-haptics-driver-support-periodic-sine-and-fixes.patch
+
+# ============== Audio ==============
+0036_ASoC--qcom--sc8280xp-Add-support-for-Primary-I2S.patch
+0047_ASoC--codecs--aw88166--AYN-Odin2-Specific-modifica.patch
+
+# ============== LED / RGB ==============
+0033_leds--Add-driver-for-HEROIC-HTR3212.patch
+
+# ============== PWM ==============
+0050_pmk8550-pwm.patch
+0054_sn3112-pwm-driver.patch
+
+# ============== Storage ==============
+0042_mmc--sdhci-msm--Toggle-the-FIFO-write-clock-after-.patch
+
+# ============== SoC / Platform ==============
+20260424_neil_armstrong_arm64_dts_qcom_sm8_456_50_add_missing_cx_power_domain_to_gcc.patch
+v6_20260210_quic_utiwari_crypto_qce_add_runtime_pm_and_interconnect_bandwidth_scaling_support.patch
+0504-wakeup-qcom-ipcc-remove-IRQF-NO-SUSPEND.patch
+0505-msm_gem-lock-before-put_iova_spaces.patch
+
+# ============== SM8550 DTSI prereqs (AYN common DTSI references these) ==============
+0100-SM8550-Fix-L2-cache-for-CPU2-and-add-cache-sizes.patch
+0101-v3_20260219_webgeek1234_arm64_qcom_sm8550_add_ddr_llcc_l3_cpu_bandwidth_scaling.patch
+0102-20240424_wuxilin123_ayn_odin_2_support.patch
+0103_arm64--dts--qcom--sm8550--add-UART15.patch
+0120-20250728_konradybcio_gpu_cc_power_requirements_reality_check.patch
+0122-interconnect__qcom__sm8550__Enable_QoS_configuration.patch
+0154-dts-qcom-sm8550-add-opp-acd-level.patch
+0200-ASoC-wcd938x-add-DMIC-DAPM-inputs.patch
+
+# ============== System tweaks ==============
+0500-ROCKNIX-set-boot-fanspeed.patch
+0501-ROCKNIX-fix-wifi-and-bt-mac.patch
+0503-ROCKNIX-battery-name.patch
+
+# ============== SM8650 (AYANEO Pocket S2, KONKR Pocket FIT) ==============
+0006-add-hw_params-callback-function-to-drm_connector_hdmi_audio_ops.patch
+0007-audioreach-Add-dedicated-WSA2-support.patch
+0040-dts-qcom-sm8650-Add-sound-DAI-prefix-for-DP.patch
+0050-update-sm8650-dtsi.patch
+v2_20260420_neil_armstrong_arm64_qcom_sm8650_misc_enhancements.patch
+0063-gpu-drm-panel-add-pocket-fit-panel.patch
+
+# ============== SM8750 (AYN Odin 3) ==============
+0026-dt-bindings-arm-qcom-ids-Add-SoC-ID-for-CQ8725S.patch
+0027-soc-qcom-socinfo-Add-CQ8725S-SoC-ID.patch
+0034-arm64-dts-qcom-sm8750-Add-UART15.patch
+sm8750-gpucc-clock-controller.patch
+sm8750-add-display-gpu-nodes.patch
+sm8750-adreno-a830-gpu-driver.patch
+0039-wifi-ath12k-add-initial-hardware-definition-for-WCN7.patch
+0040-wifi-ath12k-send-QDSS-config-when-CNSS_QDSS_CFG_MISS.patch
+0041-wifi-ath12k-disable-CNSS_QDSS_CFG_MISS_V01-for-the-W.patch
+0042-PCI-pwrctrl-pwrseq-add-support-for-WCN7860.patch
+0043-power-sequencing-qcom-wcn-add-support-for-WCN7860.patch
+0044-clk-qcom-gcc-sm8750-Do-not-turn-off-PCIe-GDSCs-durin.patch
+0045-Bluetooth-qca-add-WCN7860-support.patch
+0600-ROCKNIX-sm8750-tsens-thermal-zones.patch

@@ -1,0 +1,16 @@
+name: mangohud
+on:
+  push:
+    branches: [main]
+    paths: ['mangohud/**', 'oci/**', '.github/workflows/mangohud.yml', '.github/workflows/_package-image.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+jobs:
+  build:
+    uses: ./.github/workflows/_package-image.yml
+    secrets: inherit
+    with:
+      package: mangohud

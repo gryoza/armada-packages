@@ -1,0 +1,12 @@
+From: virtudude <virtudude@protonmail.com>
+
+--- a/arch/arm64/boot/dts/qcom/sm8650-ayaneo-common.dtsi
++++ b/arch/arm64/boot/dts/qcom/sm8650-ayaneo-common.dtsi
+@@ -1248,7 +1248,6 @@
+ 	bus-width = <4>;
+ 	no-sdio;
+ 	no-mmc;
+-	sdhci-caps-mask = <0x3 0x0>;
+ 
+ 	pinctrl-0 = <&sdc2_default>, <&sdc2_card_det_n>;
+ 	pinctrl-1 = <&sdc2_sleep>, <&sdc2_card_det_n>;

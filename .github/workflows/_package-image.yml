@@ -1,0 +1,82 @@
+name: package-image
+
+# Reusable: build one package, wrap its artifacts in a scratch image, push to
+# ghcr.io/<owner>/armada-packages/<package>, and print the digest to pin in armada.
+on:
+  workflow_call:
+    inputs:
+      package:
+        description: "Image name suffix under ghcr.io/<owner>/armada-packages/"
+        required: true
+        type: string
+    outputs:
+      digest:
+        description: "The pushed image digest (pin this in armada's Containerfile)"
+        value: ${{ jobs.build.outputs.digest }}
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04-arm   # native aarch64; free for public repos
+    concurrency:
+      group: ${{ inputs.package }}-image
+      cancel-in-progress: true
+    permissions:
+      contents: read
+      packages: write
+      id-token: write           # cosign keyless (Sigstore OIDC)
+    outputs:
+      digest: ${{ steps.push.outputs.digest }}
+    env:
+      IMAGE: ghcr.io/${{ github.repository_owner }}/armada-packages/${{ inputs.package }}
+      CCACHE_DIR: ${{ github.workspace }}/.ccache
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tooling
+        run: |
+          sudo apt-get update -y && sudo apt-get install -y podman buildah ccache
+          mkdir -p "${CCACHE_DIR}"
+
+      # Opt-in lives in each build.sh: only those that wire up ccache populate
+      # this per-package dir.
+      - name: ccache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.CCACHE_DIR }}
+          key: ccache-${{ inputs.package }}-${{ runner.arch }}-${{ hashFiles(format('{0}/**', inputs.package)) }}
+          restore-keys: |
+            ccache-${{ inputs.package }}-${{ runner.arch }}-
+
+      - name: Build artifacts
+        run: cd ${{ inputs.package }} && ./build.sh
+
+      - name: Stage image context
+        run: |
+          bash scripts/stage.sh ${{ inputs.package }}
+          echo "Staged for ${IMAGE}:" && find ctx -type f
+
+      - name: Build + push
+        id: push
+        run: |
+          TAG="$(date -u +%Y%m%d)-${GITHUB_SHA::8}"
+          buildah build -f oci/Containerfile -t "${IMAGE}:${TAG}" .
+          buildah tag "${IMAGE}:${TAG}" "${IMAGE}:latest"
+          echo "${{ secrets.GITHUB_TOKEN }}" | buildah login -u "${{ github.actor }}" --password-stdin ghcr.io
+          buildah push "${IMAGE}:${TAG}"
+          buildah push --digestfile /tmp/digest "${IMAGE}:latest"
+          DIGEST="$(cat /tmp/digest)"
+          echo "digest=${DIGEST}" >> "$GITHUB_OUTPUT"
+          {
+            echo "### \`${{ inputs.package }}\` published"
+            echo "Pin in armada's Containerfile:"
+            echo '```'
+            echo "${IMAGE}@${DIGEST}"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3
+      - name: Sign image (cosign keyless)
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | cosign login ghcr.io -u "${{ github.actor }}" --password-stdin
+          cosign sign --yes "${IMAGE}@${{ steps.push.outputs.digest }}"

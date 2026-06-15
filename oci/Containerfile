@@ -1,0 +1,4 @@
+# Carrier image: armada bind-mounts these at build time, so artifacts never
+# land in an armada image layer. The workflow stages outputs into ./ctx first.
+FROM scratch
+COPY ctx/ /

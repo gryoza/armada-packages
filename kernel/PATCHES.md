@@ -1,0 +1,215 @@
+# Patches
+
+Patches applied on top of BASE.env. Each entry's `source` is an upstream URL pinned
+to a commit, or `armada` if it's original; a URL source with no `notes` is verbatim.
+`notes` mean the file was modified.
+
+- `patches/0002-qcom-dispcc-sm8550-Fix-disp_cc_mdss_mdp_clk_src.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0002-qcom-dispcc-sm8550-Fix-disp_cc_mdss_mdp_clk_src.patch
+- `patches/0004-drm-msm-a6xx-Enable-IFPC-on-Adreno-740.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0004-drm-msm-a6xx-Enable-IFPC-on-Adreno-740.patch
+- `patches/0006-add-hw_params-callback-function-to-drm_connector_hdmi_audio_ops.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8650/patches/linux/0006-add-hw_params-callback-function-to-drm_connector_hdmi_audio_ops.patch
+- `patches/0007-audioreach-Add-dedicated-WSA2-support.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8650/patches/linux/0007-audioreach-Add-dedicated-WSA2-support.patch
+- `patches/0010-msm-resource-cleanup.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/packages/linux/patches/7.0/0010-msm-resource-cleanup.patch
+- `patches/0015-touchscreen-edt-ft5x06-allow-to-override-input-name.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8250/patches/linux/0015-touchscreen-edt-ft5x06-allow-to-override-input-name.patch
+- `patches/0026-dt-bindings-arm-qcom-ids-Add-SoC-ID-for-CQ8725S.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0026-dt-bindings-arm-qcom-ids-Add-SoC-ID-for-CQ8725S.patch
+- `patches/0027-soc-qcom-socinfo-Add-CQ8725S-SoC-ID.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0027-soc-qcom-socinfo-Add-CQ8725S-SoC-ID.patch
+- `patches/0030-input-rmi4-add-reset-gpio.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0030-input-rmi4-add-reset-gpio.patch
+- `patches/0031_input--Add-driver-for-RSInput-Gamepad.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0031_input--Add-driver-for-RSInput-Gamepad.patch
+- `patches/0032-rmi4-silence-spam-irq-errors.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0032-rmi4-silence-spam-irq-errors.patch
+- `patches/0033_leds--Add-driver-for-HEROIC-HTR3212.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0033_leds--Add-driver-for-HEROIC-HTR3212.patch
+- `patches/0034-arm64-dts-qcom-sm8750-Add-UART15.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0034-arm64-dts-qcom-sm8750-Add-UART15.patch
+- `patches/0036_ASoC--qcom--sc8280xp-Add-support-for-Primary-I2S.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0036_ASoC--qcom--sc8280xp-Add-support-for-Primary-I2S.patch
+- `patches/0039-wifi-ath12k-add-initial-hardware-definition-for-WCN7.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0039-wifi-ath12k-add-initial-hardware-definition-for-WCN7.patch
+- `patches/0040-dts-qcom-sm8650-Add-sound-DAI-prefix-for-DP.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8650/patches/linux/0040-dts-qcom-sm8650-Add-sound-DAI-prefix-for-DP.patch
+- `patches/0040-wifi-ath12k-send-QDSS-config-when-CNSS_QDSS_CFG_MISS.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0040-wifi-ath12k-send-QDSS-config-when-CNSS_QDSS_CFG_MISS.patch
+- `patches/0041-wifi-ath12k-disable-CNSS_QDSS_CFG_MISS_V01-for-the-W.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0041-wifi-ath12k-disable-CNSS_QDSS_CFG_MISS_V01-for-the-W.patch
+- `patches/0042_mmc--sdhci-msm--Toggle-the-FIFO-write-clock-after-.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0042_mmc--sdhci-msm--Toggle-the-FIFO-write-clock-after-.patch
+- `patches/0042-PCI-pwrctrl-pwrseq-add-support-for-WCN7860.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0042-PCI-pwrctrl-pwrseq-add-support-for-WCN7860.patch
+- `patches/0043-power-sequencing-qcom-wcn-add-support-for-WCN7860.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0043-power-sequencing-qcom-wcn-add-support-for-WCN7860.patch
+- `patches/0044-clk-qcom-gcc-sm8750-Do-not-turn-off-PCIe-GDSCs-durin.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0044-clk-qcom-gcc-sm8750-Do-not-turn-off-PCIe-GDSCs-durin.patch
+- `patches/0045-Bluetooth-qca-add-WCN7860-support.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0045-Bluetooth-qca-add-WCN7860-support.patch
+- `patches/0047_ASoC--codecs--aw88166--AYN-Odin2-Specific-modifica.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8250/patches/linux/0047_ASoC--codecs--aw88166--AYN-Odin2-Specific-modifica.patch
+- `patches/0050_pmk8550-pwm.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0050_pmk8550-pwm.patch
+- `patches/0050-update-sm8650-dtsi.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8650/patches/linux/0050-update-sm8650-dtsi.patch
+- `patches/0051-gpu-panel-add-Pocket-ACE-panel-driver.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0051-gpu-panel-add-Pocket-ACE-panel-driver.patch
+- `patches/0052-gpu-panel-add-Pocket-DMG-panel-driver.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0052-gpu-panel-add-Pocket-DMG-panel-driver.patch
+- `patches/0053-add-hynitron-touchscreen.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0053-add-hynitron-touchscreen.patch
+- `patches/0053-edt-ft5x06-add-no_regmap_bulk_read-option.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0053-edt-ft5x06-add-no_regmap_bulk_read-option.patch
+- `patches/0053-gpu-panel-add-Pocket-DS-lower-panel-driver.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0053-gpu-panel-add-Pocket-DS-lower-panel-driver.patch
+- `patches/0054_sn3112-pwm-driver.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0054_sn3112-pwm-driver.patch
+- `patches/0055_Synaptics-TD4328-LCD-panel.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0055_Synaptics-TD4328-LCD-panel.patch
+- `patches/0056_Xm-Plus-XM91080G-panel.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0056_Xm-Plus-XM91080G-panel.patch
+- `patches/0057_Chipone-ICNA35XX-panel.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0057_Chipone-ICNA35XX-panel.patch
+- `patches/0057_DDIC-CH13726A-panel.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0057_DDIC-CH13726A-panel.patch
+- `patches/0058_AYN-Odin2-Mini--backlight.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0058_AYN-Odin2-Mini--backlight.patch
+- `patches/0059_AYN-Odin2-Mini--hynitron--cstxxx.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0059_AYN-Odin2-Mini--hynitron--cstxxx.patch
+- `patches/0060-Add-Silergy-SY7758-backlight-driver.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0060-Add-Silergy-SY7758-backlight-driver.patch
+- `patches/0060-input-touchscreen-add-synaptics-dsx-driver.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0060-input-touchscreen-add-synaptics-dsx-driver.patch
+- `patches/0060-input-touchscreen-add-synaptics-dsx-kconfig.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0060-input-touchscreen-add-synaptics-dsx-kconfig.patch
+- `patches/0061-regulator-add-sgm3804-i2c-regulator-for-panel-power-.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0061-regulator-add-sgm3804-i2c-regulator-for-panel-power-.patch
+- `patches/0062-gpu-drm-panel-add-wt0630-panel.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0062-gpu-drm-panel-add-wt0630-panel.patch
+- `patches/0071-HACK-fix-usb-boot-hang.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0071-HACK-fix-usb-boot-hang.patch
+- `patches/0100-SM8550-Fix-L2-cache-for-CPU2-and-add-cache-sizes.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0100-SM8550-Fix-L2-cache-for-CPU2-and-add-cache-sizes.patch
+- `patches/0101-v3_20260219_webgeek1234_arm64_qcom_sm8550_add_ddr_llcc_l3_cpu_bandwidth_scaling.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0101-v3_20260219_webgeek1234_arm64_qcom_sm8550_add_ddr_llcc_l3_cpu_bandwidth_scaling.patch
+- `patches/0102-20240424_wuxilin123_ayn_odin_2_support.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0102-20240424_wuxilin123_ayn_odin_2_support.patch
+- `patches/0103_arm64--dts--qcom--sm8550--add-UART15.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0103_arm64--dts--qcom--sm8550--add-UART15.patch
+- `patches/0104-drm-panel-Add-Retroid-Pocket-6-panel.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0104-drm-panel-Add-Retroid-Pocket-6-panel.patch
+- `patches/0120-20250728_konradybcio_gpu_cc_power_requirements_reality_check.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0120-20250728_konradybcio_gpu_cc_power_requirements_reality_check.patch
+- `patches/0122-interconnect__qcom__sm8550__Enable_QoS_configuration.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0122-interconnect__qcom__sm8550__Enable_QoS_configuration.patch
+- `patches/0154-dts-qcom-sm8550-add-opp-acd-level.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0154-dts-qcom-sm8550-add-opp-acd-level.patch
+- `patches/0200-ASoC-wcd938x-add-DMIC-DAPM-inputs.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0200-ASoC-wcd938x-add-DMIC-DAPM-inputs.patch
+- `patches/0500-ROCKNIX-set-boot-fanspeed.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0500-ROCKNIX-set-boot-fanspeed.patch
+- `patches/0501-ROCKNIX-fix-wifi-and-bt-mac.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0501-ROCKNIX-fix-wifi-and-bt-mac.patch
+- `patches/0503-ROCKNIX-battery-name.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0503-ROCKNIX-battery-name.patch
+- `patches/0504-Enable-64-bit-processes-to-use-compat-input-syscalls.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8250/patches/linux/0504-Enable-64-bit-processes-to-use-compat-input-syscalls.patch
+- `patches/0504-wakeup-qcom-ipcc-remove-IRQF-NO-SUSPEND.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0504-wakeup-qcom-ipcc-remove-IRQF-NO-SUSPEND.patch
+- `patches/0505-msm_gem-lock-before-put_iova_spaces.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8250/patches/linux/0505-msm_gem-lock-before-put_iova_spaces.patch
+- `patches/0506-usbcore-add-interrupt-interval-override.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/0506-usbcore-add-interrupt-interval-override.patch
+- `patches/0508-input-rsinput-add-pm-resume-to-reinit-mcu-after-suspend.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0508-input-rsinput-add-pm-resume-to-reinit-mcu-after-suspend.patch
+- `patches/0600-ROCKNIX-sm8750-tsens-thermal-zones.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0600-ROCKNIX-sm8750-tsens-thermal-zones.patch
+- `patches/1000-add-qcom-haptics-driver.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/1000-add-qcom-haptics-driver.patch
+- `patches/1002-haptics-driver-support-periodic-sine-and-fixes.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/1002-haptics-driver-support-periodic-sine-and-fixes.patch
+- `patches/1003-rsinput-add-ff.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/1003-rsinput-add-ff.patch
+- `patches/1300-input-rsinput-ranges.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/1300-input-rsinput-ranges.patch
+- `patches/20260424_neil_armstrong_arm64_dts_qcom_sm8_456_50_add_missing_cx_power_domain_to_gcc.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/20260424_neil_armstrong_arm64_dts_qcom_sm8_456_50_add_missing_cx_power_domain_to_gcc.patch
+- `patches/v2_20260420_neil_armstrong_arm64_qcom_sm8650_misc_enhancements.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8650/patches/linux/v2_20260420_neil_armstrong_arm64_qcom_sm8650_misc_enhancements.patch
+- `patches/v6_20260210_quic_utiwari_crypto_qce_add_runtime_pm_and_interconnect_bandwidth_scaling_support.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/patches/linux/v6_20260210_quic_utiwari_crypto_qce_add_runtime_pm_and_interconnect_bandwidth_scaling_support.patch
+- `patches/0063-gpu-drm-panel-add-pocket-fit-panel.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8650/patches/linux/0063-gpu-drm-panel-add-pocket-fit-panel.patch
+  notes: modified — rebased to apply after the SM8550 panels
+- `patches/sm8750-gpucc-clock-controller.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0000_to_0025-linux-7-0_qcom-adreno_waiting-for-upstream.patch
+  notes: modified — extracted (gpucc slice) from the ROCKNIX adreno bundle
+- `patches/sm8750-add-display-gpu-nodes.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0000_to_0025-linux-7-0_qcom-adreno_waiting-for-upstream.patch
+  notes: modified — extracted (display + GPU DT nodes) from the ROCKNIX adreno bundle + 0036/0037/0038
+- `patches/sm8750-adreno-a830-gpu-driver.patch`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0000_to_0025-linux-7-0_qcom-adreno_waiting-for-upstream.patch
+  notes: modified — extracted (drm/msm a830 driver) from the ROCKNIX adreno bundle; content unchanged
+- `dts/qcs8550-ayaneo-pocketace.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayaneo-pocketace.dts
+- `dts/qcs8550-ayaneo-pocket-common.dtsi`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayaneo-pocket-common.dtsi
+- `dts/qcs8550-ayaneo-pocketdmg.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayaneo-pocketdmg.dts
+- `dts/qcs8550-ayaneo-pocketds.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayaneo-pocketds.dts
+- `dts/qcs8550-ayaneo-pocketevo.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayaneo-pocketevo.dts
+- `dts/qcs8550-ayaneo-pockets2k.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayaneo-pockets2k.dts
+- `dts/qcs8550-ayn-common.dtsi`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayn-common.dtsi
+- `dts/qcs8550-ayn-odin2.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayn-odin2.dts
+- `dts/qcs8550-ayn-odin2mini.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayn-odin2mini.dts
+- `dts/qcs8550-ayn-odin2portal.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayn-odin2portal.dts
+- `dts/qcs8550-ayn-thor.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayn-thor.dts
+- `dts/qcs8550-retroidpocket-rp6.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-retroidpocket-rp6.dts
+- `dts/qcs8550-retroidpocket-rp6-top-dpad.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-retroidpocket-rp6-top-dpad.dts
+- `dts/sm8650-ayaneo-common.dtsi`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8650/linux/dts/qcom/sm8650-ayaneo-common.dtsi
+- `dts/sm8650-ayaneo-ps2.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8650/linux/dts/qcom/sm8650-ayaneo-ps2.dts
+- `dts/sm8650-konkr-pf.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8650/linux/dts/qcom/sm8650-konkr-pf.dts
+- `dts/cq8725s-ayn-common.dtsi`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0046-arm64-dts-qcom-Add-AYN-CQ8725S-Common.patch
+  notes: modified — extracted (the DTS) from this ROCKNIX add-DTS patch
+- `dts/cq8725s-ayn-odin3.dts`
+  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8750/patches/linux/0047-arm64-dts-qcom-Add-AYN-Odin3.patch
+  notes: modified — extracted (the DTS) from this ROCKNIX add-DTS patch
+- `dts/qcs8550-ayaneo-pocket-common.dtsi.patch`
+  source: armada
+  notes: edits dts/qcs8550-ayaneo-pocket-common.dtsi
+- `dts/qcs8550-ayaneo-pocketds.dts.patch`
+  source: armada
+  notes: edits dts/qcs8550-ayaneo-pocketds.dts
+- `dts/qcs8550-ayn-common.dtsi.patch`
+  source: armada
+  notes: edits dts/qcs8550-ayn-common.dtsi
+- `dts/qcs8550-ayn-thor.dts.patch`
+  source: armada
+  notes: edits dts/qcs8550-ayn-thor.dts
+- `dts/qcs8550-retroidpocket-rp6.dts.patch`
+  source: armada
+  notes: edits dts/qcs8550-retroidpocket-rp6.dts
+- `dts/qcs8550-retroidpocket-rp6-top-dpad.dts.patch`
+  source: armada
+  notes: edits dts/qcs8550-retroidpocket-rp6-top-dpad.dts
+- `dts/sm8650-ayaneo-common.dtsi.patch`
+  source: armada
+  notes: edits dts/sm8650-ayaneo-common.dtsi

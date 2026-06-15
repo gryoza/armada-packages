@@ -1,0 +1,12 @@
+From: virtudude <virtudude@protonmail.com>
+
+--- a/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi
++++ b/arch/arm64/boot/dts/qcom/qcs8550-ayn-common.dtsi
+@@ -1461,7 +1461,6 @@
+ 	no-mmc;
+ 
+ 	qcom,dll-config = <0x0007442c>;
+-	sdhci-caps-mask = <0x3 0x0>;
+ 
+ 	status = "okay";
+ };
