@@ -157,7 +157,7 @@ to a commit, or `armada` if it's original; a URL source with no `notes` is verba
 - `dts/qcs8550-ayaneo-pocketace.dts`
   source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayaneo-pocketace.dts
 - `dts/qcs8550-ayaneo-pocket-common.dtsi`
-  source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayaneo-pocket-common.dtsi
+  source: https://github.com/ROCKNIX/distribution/blob/fea700c4149331428f2568babe8f0aeddb6f84d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayaneo-pocket-common.dtsi
 - `dts/qcs8550-ayaneo-pocketdmg.dts`
   source: https://github.com/ROCKNIX/distribution/blob/e485495a942daba186d4a8543e18a1ad09c9a5d5/projects/ROCKNIX/devices/SM8550/linux/dts/qcom/qcs8550-ayaneo-pocketdmg.dts
 - `dts/qcs8550-ayaneo-pocketds.dts`
