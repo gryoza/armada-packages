@@ -5,7 +5,7 @@ source ./BASE.env
 source ../toolchain.env
 
 mkdir -p out; rm -f out/*
-podman run --rm -e VERSION="${VERSION}" -v "${REPO}:/work:Z" -w /work --platform linux/aarch64 "${BUILDER_IMAGE}" bash -euxc '
+podman run --rm -e VERSION="${VERSION}" -e ARMADA_MARCH="${ARMADA_MARCH}" -v "${REPO}:/work:Z" -w /work --platform linux/aarch64 "${BUILDER_IMAGE}" bash -euxc '
     dnf -y install --skip-unavailable \
         rpm-build rpmdevtools dnf-plugins-core spectool catch-devel \
         cmake gcc gcc-c++ git-core meson ninja-build \
@@ -28,6 +28,8 @@ podman run --rm -e VERSION="${VERSION}" -v "${REPO}:/work:Z" -w /work --platform
 EOF
     cp gamescope.spec ~/rpmbuild/SPECS/
     sed -i "s/^Version:.*/Version:        ${VERSION}/" ~/rpmbuild/SPECS/gamescope.spec
+    sed -i "/^%build$/i %global build_cflags %{build_cflags} ${ARMADA_MARCH}" ~/rpmbuild/SPECS/gamescope.spec
+    sed -i "/^%build$/i %global build_cxxflags %{build_cxxflags} ${ARMADA_MARCH}" ~/rpmbuild/SPECS/gamescope.spec
     cp patches/*.patch stb.pc ~/rpmbuild/SOURCES/
     spectool -g -R ~/rpmbuild/SPECS/gamescope.spec
     rpmbuild -bb ~/rpmbuild/SPECS/gamescope.spec
